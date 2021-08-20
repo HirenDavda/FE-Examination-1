@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Almarai', sans-serif;
+    font-weight: 400;
+}
+
+ul, li { list-style: none; }
+
+// Header css
+.c-header {
+    background: $brown;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+
+    .logo { 
+        margin: 1.5rem 0; 
+        img { max-height: 2rem; }
+    }
+}
+
+.mobo-nav-btn, .mobo-logout { display: flex; align-self: center; }
+
+// Main container
+.main-container { padding: 0 2rem; }
+
+
+.account-conatiner {
+    padding: 4rem 0;
+    border-bottom: solid 1px $gray-d5;
+}
+
+.configuration-container { padding: 4rem 0; }
+
+
+// Small devices (landscape phones, 576px and up)
+@media all and (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media all and (min-width: 768px) {
+    // Header css
+    .c-header { 
+        .logo { 
+            margin: 1.188rem 0; 
+            img { max-height: 2.625rem; }    
+        }
+    }
+}
+
+// Extra large devices (large desktops, 992px and up)
+@media all and (min-width: 992px) {
+    .mobo-nav-btn, 
+    .mobo-logout { display: none; }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media all and (min-width: 1200px) {
+    // Main container
+    .main-container { padding: 0 8.125rem 7.125rem; }
+
+    // Header css
+    .c-header { 
+        padding: 0 8.125rem; 
+
+        .logo { 
+            margin: 1.688rem 0; 
+            img { max-height: 2.875rem; }            
+        }
+    }
+}

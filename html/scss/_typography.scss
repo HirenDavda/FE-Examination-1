@@ -1,0 +1,62 @@
+/* [Start] Font family */
+@mixin fs-almarai-lg {
+    font-weight: 300;
+}
+@mixin fs-almarai-rg {
+    font-weight: 400;
+}
+@mixin fs-almarai-bl {
+    font-weight: 700;
+}
+@mixin fs-almarai-eb {
+    font-weight: 800;
+}
+
+/* [Start] Colors */
+$white: #ffffff;
+$green: #86EAAE;
+$orange: #FC732F;
+$orange-light: #FFF7F3;
+$gray-fa: #fafafa;
+$gray-21: #212121;
+$gray-75: #757575;
+$gray-d5: #d5d5d5;
+$brown: #5C524D;
+
+
+
+/* [Start] Font size */
+@mixin fs-12 { font-size: 0.75rem; }
+
+@mixin fs-14 { font-size: 0.875rem; }
+
+@mixin fs-16 { font-size: 1rem; }
+
+@mixin fs-17 { font-size: 1.063rem; }
+
+@mixin fs-18 { font-size: 1.125rem; }
+
+@mixin fs-20 { font-size: 1.25rem; }
+
+@mixin fs-22 { font-size: 1.375rem; }
+
+@mixin fs-24 { font-size: 1.5rem; }
+
+@mixin fs-26 { font-size: 1.625rem; }
+
+@mixin fs-28 { font-size: 1.75rem; }
+
+@mixin fs-30 { font-size: 1.875rem; }
+
+@mixin fs-32 { font-size: 2rem; }
+
+@mixin fs-34 { font-size: 2.125rem; }
+
+@mixin fs-36 { font-size: 2.25rem; }
+
+@mixin fs-40 { font-size: 2.5rem; }
+
+@mixin fs-48 { font-size: 3rem; }
+
+
+

@@ -1,0 +1,522 @@
+/* [Start] Font family */
+/* [Start] Colors */
+/* [Start] Font size */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Almarai', sans-serif;
+  font-weight: 400;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.c-header {
+  background: #5C524D;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.c-header .logo {
+  margin: 1.5rem 0;
+}
+
+.c-header .logo img {
+  max-height: 2rem;
+}
+
+.mobo-nav-btn, .mobo-logout {
+  display: flex;
+  align-self: center;
+}
+
+.main-container {
+  padding: 0 2rem;
+}
+
+.account-conatiner {
+  padding: 4rem 0;
+  border-bottom: solid 1px #d5d5d5;
+}
+
+.configuration-container {
+  padding: 4rem 0;
+}
+
+@media all and (min-width: 768px) {
+  .c-header .logo {
+    margin: 1.188rem 0;
+  }
+  .c-header .logo img {
+    max-height: 2.625rem;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .mobo-nav-btn,
+  .mobo-logout {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .main-container {
+    padding: 0 8.125rem 7.125rem;
+  }
+  .c-header {
+    padding: 0 8.125rem;
+  }
+  .c-header .logo {
+    margin: 1.688rem 0;
+  }
+  .c-header .logo img {
+    max-height: 2.875rem;
+  }
+}
+
+.c-warning {
+  background-color: #FFF7F3;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #212121;
+}
+
+.c-warning img {
+  margin-right: 1rem;
+}
+
+@media all and (min-width: 1200px) {
+  .c-warning {
+    padding: 1rem 8.125rem;
+  }
+}
+
+.c-btn {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  /* Border button */
+  /* Background button */
+}
+
+.c-btn--icon > img {
+  margin-right: 0.625rem;
+}
+
+.c-btn--br {
+  border-width: 0.125rem;
+  border-style: solid;
+}
+
+.c-btn--orange {
+  color: #FC732F;
+  border-color: #FC732F;
+  background-color: transparent;
+}
+
+.c-btn--bg {
+  color: #ffffff;
+  background-color: #FC732F;
+  border: 0;
+}
+
+.account-card__image > img {
+  border-radius: 0.25rem;
+  max-width: 100%;
+}
+
+.account-card__title {
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: #212121;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.configuration__title {
+  font-weight: 400;
+  font-size: 2rem;
+  color: #212121;
+  margin-bottom: 2rem;
+}
+
+.configuration__body .btn-container {
+  padding-top: 2rem;
+}
+
+.configuration-card {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding-left: 3.5rem;
+}
+
+.configuration-card.active .configuration-card__body {
+  background-color: #fafafa;
+}
+
+.configuration-card__body {
+  border: solid 1px #d5d5d5;
+  padding: 2rem;
+}
+
+.configuration-card__body + .configuration-card__body {
+  border-top: 0;
+}
+
+.configuration-card__heading {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #212121;
+}
+
+.configuration-card__heading--normal {
+  font-weight: 400;
+}
+
+.configuration-card__desc {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #212121;
+  line-height: 1.125rem;
+}
+
+.configuration-card .c-radio-group {
+  position: absolute;
+  left: 0;
+  top: 2.75rem;
+}
+
+.sucess-card {
+  text-align: center;
+}
+
+.sucess-card__image {
+  padding-bottom: 1.25rem;
+}
+
+.sucess-card__title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #212121;
+  margin-bottom: 1.25rem;
+  text-transform: capitalize;
+}
+
+.sucess-card__desc {
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #212121;
+}
+
+@media all and (max-width: 767px) {
+  .account-card__image {
+    padding-bottom: 4rem;
+  }
+  .configuration__body .btn-container .c-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .configuration__body .btn-container .c-btn + .c-btn {
+    margin-top: 2rem;
+  }
+  .configuration-card__body {
+    padding: 2rem 1.938rem;
+  }
+  .configuration-card__body--show .configuration-card__heading {
+    margin-bottom: 0.5rem;
+  }
+  .configuration-card__body--show .configuration-card__desc {
+    display: block;
+  }
+  .configuration-card__desc {
+    display: none;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .account-card {
+    display: flex;
+  }
+  .account-card__image {
+    width: 13.25rem;
+  }
+  .account-card__body {
+    padding-left: 5.875rem;
+    width: calc(100% - 13.25rem);
+  }
+  .configuration__title {
+    font-size: 2.25rem;
+  }
+  .configuration__body .btn-container {
+    display: flex;
+    padding-left: 3.5rem;
+  }
+  .configuration__body .btn-container .c-btn {
+    margin-right: 2rem;
+  }
+  .configuration-card__heading {
+    margin-bottom: 0.5rem;
+  }
+  .sucess-card__image {
+    padding-bottom: 1.5rem;
+  }
+  .sucess-card__title {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .account-card__image {
+    width: 23.25rem;
+  }
+  .account-card__body {
+    padding-left: 8.25rem;
+    width: calc(100% - 23.25rem);
+  }
+  .account-card__title {
+    font-size: 3rem;
+  }
+  .account-card__form-group {
+    display: flex;
+  }
+  .account-card__form-group .c-form-group + .c-form-group {
+    margin-left: 2rem;
+    width: 65%;
+  }
+  .sucess-card__image {
+    padding-bottom: 2rem;
+  }
+  .sucess-card__title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  .sucess-card__desc {
+    font-size: 1.5rem;
+  }
+}
+
+.nav {
+  padding: 0;
+  margin: 0;
+}
+
+.nav__link {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #ffffff;
+  opacity: 0.75;
+  text-shadow: 0 0.125rem 0.125rem rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 1rem;
+  display: block;
+}
+
+.nav__link.active {
+  opacity: 1;
+}
+
+.nav__link.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #86EAAE;
+  height: 0.125rem;
+  width: 100%;
+}
+
+@media all and (max-width: 992px) {
+  .nav {
+    position: fixed;
+    top: 11.3rem;
+    bottom: 0;
+    right: -100%;
+    z-index: 9;
+    width: 100%;
+    height: calc(100vh - 11.3rem);
+    background-color: #5C524D;
+    padding-top: 1.25rem;
+    border-top: solid 1px #50453f;
+    transition: right 0.2s;
+  }
+  .nav--show {
+    right: 0;
+  }
+  .nav .nav__item:last-child {
+    display: none;
+  }
+  .nav__item {
+    padding: 1.25rem 2rem;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .nav {
+    display: flex;
+    align-self: flex-end;
+  }
+  .nav__item {
+    padding-left: 2.5rem;
+  }
+  .nav__link {
+    padding-bottom: 1.875rem;
+  }
+  .nav__link.active::after {
+    height: 0.625rem;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .nav__link {
+    padding-bottom: 2.625rem;
+  }
+}
+
+.c-popup {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.c-popup--show {
+  display: flex;
+}
+
+.c-popup--show .c-popup__content {
+  opacity: 1;
+}
+
+.c-popup__content {
+  background-color: #ffffff;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  padding: 4rem;
+  width: 21.875rem;
+  opacity: 0;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+@media all and (min-width: 768px) {
+  .c-popup__content {
+    width: 36.375rem;
+  }
+}
+
+.c-form-group {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.c-form-group--feel .c-form-group__control {
+  background-color: #fafafa;
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.c-form-group--feel .c-form-group__label {
+  top: 1rem;
+  opacity: 1;
+}
+
+.c-form-group__label {
+  position: absolute;
+  top: calc(50% - 0.5rem);
+  left: 1rem;
+  opacity: 0;
+  transition: 0.3s;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #757575;
+}
+
+.c-form-group__control {
+  background: transparent;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #212121;
+  width: 100%;
+  box-sizing: border-box;
+  transition: 0.3s;
+  padding: 1.75rem 1rem;
+  border: solid 1px #d5d5d5;
+  border-radius: 0.25rem;
+}
+
+.c-form-group__control:focus {
+  outline: 0;
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+.c-form-group__control:focus ~ label {
+  transition: 0.3s;
+  top: 1rem;
+  opacity: 1;
+}
+
+@media all and (min-width: 1200px) {
+  .c-form-group--feel .c-form-group__control {
+    font-size: 1.5rem;
+  }
+  .c-form-group__control {
+    font-size: 1.5rem;
+  }
+}
+
+/*[Start] Custom checkbox and radio input*/
+.c-radio-group {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  /* When the radio button is checked, change background */
+}
+
+.c-radio-group__control {
+  position: absolute;
+  opacity: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  left: 0.125rem;
+  top: 0.125rem;
+}
+
+.c-radio-group__custom {
+  border: 0.125rem solid #d5d5d5;
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+input:checked ~ .c-radio-group__custom {
+  transition: all .2s;
+  border-color: #86EAAE;
+  background: url(../images/green-tick.svg) no-repeat left top;
+  background-size: auto 100%;
+}
+/*# sourceMappingURL=style.css.map */

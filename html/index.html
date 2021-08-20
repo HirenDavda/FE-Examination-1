@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/app.js" defer></script>
+
+</head>
+<body>
+    
+    <!-- Warning Container -->
+    <div class="c-warning">
+        <img src="images/warning.svg" alt="Warning">
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. 
+    </div>
+
+    <!-- Header Container -->
+    <header class="c-header">
+        <span class="mobo-nav-btn"><img src="images/nav-icon.svg" alt="Nav"></span>
+        <a class="logo" href="/"><img src="images/logo.svg" alt="Logo"></a>
+        <ul class="nav">
+            <li class="nav__item"><a href="#" class="nav__link">Dashboard</a></li>
+            <li class="nav__item"><a href="#" class="nav__link active">Account</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Help</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Logout</a></li>
+        </ul>
+        <span class="mobo-logout"><img src="images/logout.svg" alt="Logout"></span>
+    </header>
+
+    <div class="main-container">
+
+        <!-- My Account Container -->
+        <section class="account-conatiner">
+            <div class="account-card">
+                <div class="account-card__image"><img src="images/user-image.jpg" alt="User"></div>
+                <div class="account-card__body">
+                    <h2 class="account-card__title">My Account</h2>
+                    <form action="">
+                        <div class="c-form-group">                            
+                            <input class="c-form-group__control" type="text" name="name" placeholder="Name">                            
+                            <label class="c-form-group__label">Name</label>
+                        </div>
+                        <div class="account-card__form-group">
+                            <div class="c-form-group">                                                                
+                                <input class="c-form-group__control" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Mobile">
+                                <label class="c-form-group__label">Mobile</label>
+                            </div>
+                            <div class="c-form-group">                                                                
+                                <input class="c-form-group__control" type="email" name="email" placeholder="Email">
+                                <label class="c-form-group__label">Email</label>
+                            </div>
+                        </div>                
+                    </form>    
+                </div>
+            </div>
+        </section>
+
+        <!-- Select Configuration Container -->
+        <section class="configuration-container">
+            <div class="configuration">
+                <h3 class="configuration__title">Select Configuration</h3>
+                <div class="configuration__body" id="selectConfig">
+                    
+                    <label class="configuration-card manual active" for="manual">
+                        <label class="c-radio-group">
+                            <input class="c-radio-group__control" type="radio" id="manual" name="configuration" value="Manual" checked>
+                            <span class="c-radio-group__custom"></span>
+                        </label>
+                        <div class="configuration-card__body">
+                            <div class="configuration-card__heading">Manual Configuration</div>
+                            <p class="configuration-card__desc">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                        </div>
+                        <div class="configuration-card__body configuration-card__body--show">
+                            <div class="configuration-card__heading configuration-card__heading--normal">Services Access</div>
+                            <p class="configuration-card__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed massa leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu varius felis. Integer posuere urna ut mi porta, vel fringilla dolor convallis. Sed laoreet sodales sapien vel vestibulum. Nulla dictum eros ut efficitur porttitor. Mauris dignissim, lectus sit amet euismod pretium, ex purus condimentum erat, eu feugiat nisi ipsum ac eros.</p>
+                        </div>
+                    </label>
+
+                    <label class="configuration-card semiAuto" for="semiAuto">                                            
+                        <label class="c-radio-group">
+                            <input class="c-radio-group__control" type="radio" id="semiAuto" name="configuration" value="Semi-auto">
+                            <span class="c-radio-group__custom"></span>
+                        </label>
+                        <div class="configuration-card__body">
+                            <div class="configuration-card__heading">Semi-auto Configuration</div>
+                            <p class="configuration-card__desc">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                        </div>
+                    </label>
+
+                    <label class="configuration-card automatic" for="automatic">                                            
+                        <label class="c-radio-group">
+                            <input class="c-radio-group__control" type="radio" id="automatic" name="configuration" value="Automatic">
+                            <span class="c-radio-group__custom"></span>
+                        </label>
+                        <div class="configuration-card__body">
+                            <div class="configuration-card__heading">Automatic Configuration</div>
+                            <p class="configuration-card__desc">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                        </div>
+                    </label>
+                    <div class="btn-container">
+                        <button class="c-btn c-btn--bg c-btn--icon c-btn--orange" id="updateConfig"><img src="images/configration.svg" alt="Configration">Update Configuration</button>
+                        <button class="c-btn c-btn--br c-btn--icon c-btn--orange"><img src="images/close-orange.svg" alt="Cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Popup Container -->
+    <div class="c-popup">
+        <div class="c-popup__content">
+            <div class="sucess-card">
+                <div class="sucess-card__image"><img src="images/clap.svg" alt="Great Job!"></div> 
+                <h2 class="sucess-card__title">Great Job!</h2>    
+                <p class="sucess-card__desc">Your configurations have been updated successfully.</p>    
+            </div>
+        </div>
+    </div>
+    <div class="c-popup-bg"></div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+/*[Start] Custom checkbox and radio input*/
+.c-radio-group {
+    display: flex;
+    position: relative;        
+    cursor: pointer;
+    
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &__control {
+        position: absolute;        
+        opacity: 0;        
+        height: 1.5rem;
+        width: 1.5rem;
+        left: 0.125rem;
+        top: 0.125rem;
+    }    
+
+    &__custom {
+        border: 0.125rem solid $gray-d5;
+        border-radius: 50%;        
+        height: 1.5rem;
+        width: 1.5rem;
+    }  
+
+    /* When the radio button is checked, change background */
+    input:checked ~ &__custom {        
+        transition: all .2s;
+        border-color: $green;
+        background: url(../images/green-tick.svg) no-repeat left top; 
+        background-size: auto 100%;           
+    }
+
+}

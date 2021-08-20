@@ -1,0 +1,91 @@
+.nav {
+    padding: 0;
+    margin: 0;
+
+    &__item {}
+
+    &__link {        
+        @include fs-almarai-bl;
+        @include fs-18;
+        color: $white;
+        opacity: 0.75;
+        text-shadow: 0 0.125rem 0.125rem rgba(0, 0, 0, 0.25);
+        text-decoration: none;       
+        position: relative; 
+        padding-bottom: 1rem;
+        display: block;
+        
+        &.active { 
+            opacity: 1;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background-color: $green;
+                height: 0.125rem;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+// Medium devices (tablets, 768px and down)
+@media all and (max-width: 992px) {
+    .nav {
+        position: fixed;
+        top: 11.3rem;
+        bottom: 0;        
+        right: -100%;
+        z-index: 9;
+        width: 100%;
+        height: calc(100vh - 11.3rem);
+        background-color: $brown;
+        padding-top: 1.25rem;
+        border-top: solid 1px #50453f;
+        transition: right 0.2s;
+
+        &--show {
+            right: 0;
+        }
+
+        .nav__item:last-child { display: none; }
+
+        &__item { 
+            padding: 1.25rem 2rem;
+        }
+       
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media all and (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media all and (min-width: 768px) {}
+
+// Extra large devices (large desktops, 992px and up)
+@media all and (min-width: 992px) {
+    .nav {
+        display: flex;
+        align-self: flex-end;
+
+        &__item {        
+            padding-left: 2.5rem;
+        }
+        &__link {              
+            padding-bottom: 1.875rem;
+
+           &.active::after { height: 0.625rem; }            
+        }
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media all and (min-width: 1200px) {
+    .nav {
+        &__link { padding-bottom: 2.625rem; }
+    }
+}

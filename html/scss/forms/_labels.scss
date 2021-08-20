@@ -1,0 +1,79 @@
+.c-form-group {    
+    position: relative;
+    margin-bottom: 2rem;
+
+    &--feel {       
+
+        .c-form-group__control {            
+            background-color: $gray-fa;
+            padding-top: 2.5rem;
+            padding-bottom: 1rem;
+            @include fs-20;
+        }
+
+        .c-form-group__label {
+            top: 1rem;
+            opacity: 1;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        top: calc(50% - 0.5rem);
+        left: 1rem;                     
+        opacity: 0;        
+        transition: 0.3s;
+
+        @include fs-almarai-rg;
+        @include fs-16;
+        color: $gray-75;
+    }
+
+    &__control {                
+        background: transparent;
+        @include fs-almarai-rg;
+        @include fs-24;
+        color: $gray-21;        
+        width: 100%;      
+        box-sizing: border-box;
+        transition: 0.3s;  
+
+        padding: 1.75rem 1rem;
+        border:  solid 1px $gray-d5;
+        border-radius: 0.25rem;
+
+        &:focus { 
+            outline: 0; 
+            padding-top: 2.5rem;
+            padding-bottom: 1rem;   
+
+            ~ label {
+                transition: 0.3s;
+                top: 1rem;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@media all and (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media all and (min-width: 768px) {}
+
+// Extra large devices (large desktops, 992px and up)
+@media all and (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media all and (min-width: 1200px) {
+    .c-form-group { 
+        &--feel { 
+            .c-form-group__control { @include fs-24; }
+        }
+        &__control {                            
+            @include fs-24;       
+        }            
+    }
+}

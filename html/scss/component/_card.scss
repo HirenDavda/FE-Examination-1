@@ -1,0 +1,210 @@
+// Account card
+.account-card {    
+
+    &__image > img {
+        border-radius: 0.25rem;
+        max-width: 100%;
+    }
+
+    &__title {
+        @include fs-almarai-eb;
+        @include fs-40;
+        color: $gray-21;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
+
+}
+
+
+// Select Configuration
+.configuration {
+    &__title {
+        @include fs-almarai-rg;
+        @include fs-32;
+        color: $gray-21;
+        margin-bottom: 2rem;
+    }
+
+    &__body {
+        .btn-container {            
+            padding-top: 2rem;            
+        }
+    }
+}
+
+.configuration-card {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    padding-left: 3.5rem;    
+    
+    &.active &__body { background-color: $gray-fa; }
+
+    &__body {
+        border: solid 1px $gray-d5;
+        padding: 2rem;
+
+        & + & { border-top: 0; }        
+    }
+
+    &__heading {
+        @include fs-almarai-bl;
+        @include fs-20;
+        color: $gray-21;        
+
+        &--normal {
+            @include fs-almarai-rg;
+        }
+    }
+
+    &__desc {
+        @include fs-almarai-rg;
+        @include fs-16;
+        color: $gray-21;
+        line-height: 1.125rem;
+    }
+
+    .c-radio-group {
+        position: absolute;
+        left: 0;
+        top: 2.75rem;
+    }
+}
+
+
+// Success card
+.sucess-card {
+    text-align: center;
+
+    &__image { padding-bottom: 1.25rem; }
+    &__title {
+        @include fs-almarai-bl;
+        @include fs-40;
+        color: $gray-21;
+        margin-bottom: 1.25rem;
+        text-transform: capitalize;
+    }
+    &__desc {
+        @include fs-almarai-rg;
+        @include fs-20;
+        color: $gray-21;
+    }
+}
+
+
+// Small devices (landscape phones, 768px and down)
+@media all and (max-width: 767px) {
+    // Account card
+    .account-card {    
+        &__image { padding-bottom: 4rem; }
+    }    
+
+    // Select Configuration
+    .configuration {
+        &__body {
+            .btn-container .c-btn {
+                width: 100%;
+                justify-content: center;
+
+                & + .c-btn { margin-top: 2rem; }
+            }
+        }    
+    }
+
+    .configuration-card {
+        &__body { 
+            padding: 2rem 1.938rem; 
+
+            &--show { 
+                .configuration-card__heading { margin-bottom: 0.5rem; }
+                .configuration-card__desc { display: block; } 
+            }
+        }
+        &__desc { display: none; }
+    }
+    
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@media all and (min-width: 576px) {}
+
+
+// Medium devices (tablets, 768px and up)
+@media all and (min-width: 768px) {
+    // Account card    
+    .account-card {
+        display: flex;
+        &__image {
+            width: 13.25rem;
+        }
+        &__body {
+            padding-left: 5.875rem;            
+            width: calc(100% - 13.25rem);            
+        }        
+    }        
+
+    // Select Configuration
+    .configuration {
+        &__title { @include fs-36; }
+        &__body {
+            .btn-container {
+                display: flex;                
+                padding-left: 3.5rem;
+
+                .c-btn { margin-right: 2rem; }
+            }
+        }                    
+    }
+
+    .configuration-card {
+        &__heading { margin-bottom: 0.5rem; }
+    }
+    
+    // Success card
+    .sucess-card {
+        &__image { padding-bottom: 1.5rem; }
+        &__title { margin-bottom: 1.5rem; }
+    }
+}
+
+// Extra large devices (large desktops, 992px and up)
+@media all and (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media all and (min-width: 1200px) {
+    // Account card    
+    .account-card {
+        &__image {
+            width: 23.25rem;
+        }
+
+        &__body {
+            padding-left: 8.25rem; 
+            width: calc(100% - 23.25rem);            
+        }
+
+        &__title {            
+            @include fs-48;            
+        }
+
+        &__form-group {
+            display: flex;
+            .c-form-group + .c-form-group {
+                margin-left: 2rem;
+                width: 65%;
+            }
+        }
+    }
+
+    // Success card
+    .sucess-card {
+        &__image { padding-bottom: 2rem; }
+        &__title {            
+            @include fs-48;            
+            margin-bottom: 2rem;            
+        }
+        &__desc { @include fs-24; }
+    }
+}

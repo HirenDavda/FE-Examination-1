@@ -1,0 +1,29 @@
+.c-warning {
+    background-color: #FFF7F3;    
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+
+    @include fs-almarai-bl;
+    @include fs-16;
+    color: $gray-21;
+
+    img { margin-right: 1rem; }
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@media all and (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media all and (min-width: 768px) {}
+
+// Extra large devices (large desktops, 992px and up)
+@media all and (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media all and (min-width: 1200px) {
+    .c-warning {
+        padding: 1rem 8.125rem;
+    }
+}

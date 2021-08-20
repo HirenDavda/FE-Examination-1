@@ -1,0 +1,37 @@
+
+.c-btn {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+
+    @include fs-almarai-bl;
+    @include fs-16;
+
+    &--icon > img {
+        margin-right: 0.625rem;
+    }
+
+    /* Border button */
+    &--br {
+        border-width: 0.125rem;
+        border-style: solid;
+    }
+
+    &--orange {
+        color: $orange;
+        border-color: $orange;
+        background-color: transparent;
+    }
+
+    /* Background button */
+    &--bg {
+        color: $white;
+        background-color: $orange;
+        border: 0;
+    }
+
+}
+
+
